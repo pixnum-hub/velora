@@ -1,6 +1,6 @@
 // Velora PWA Service Worker · Manik Roy © 2026
 // v3 — updated with allergy index, rain index, all fixes
-const CACHE = 'velora-v3';
+const CACHE = 'velora-v4';
 const STATIC = [
   './',
   './index.html',
