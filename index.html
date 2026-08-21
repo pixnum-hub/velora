@@ -1872,7 +1872,7 @@ function render(name,lat,lon,wd,ad,locMeta){
 
     <div class="card" style="animation-delay:.29s">
       <div class="slbl">📊 Weekly Comfort Ranking</div>
-      <div class="flist">${wcr.map((it,rank)=>`<div class="fi"><div class="fd">#${rank+1} ${dlabel(it.t,it.i)}</div><div class="fic">${WI[d.weather_code[it.i]]||'🌡️'}</div><div style="flex:1;padding:0 6px;font-size:.74rem;color:var(--mu)">Comfort score ${it.score.toFixed(1)}</div><div class="frng"><span class="fhi">${tS(d.temperature_2m_max[it.i])}</span><span class="flo">${tS(d.temperature_2m_min[it.i])}</span></div></div>`).join('')}</div>
+      <div class="flist">${wcr.map((it,rank)=>`<div class="fi"><div class="fd">${dlabel(it.t,it.i)}</div><div class="fic">${WI[d.weather_code[it.i]]||'🌡️'}</div><div style="flex:1;padding:0 6px;font-size:.74rem;color:var(--mu)">Comfort score ${it.score.toFixed(1)}</div><div class="frng"><span class="fhi">${tS(d.temperature_2m_max[it.i])}</span><span class="flo">${tS(d.temperature_2m_min[it.i])}</span></div></div>`).join('')}</div>
     </div>
 
     <div class="tip" style="animation-delay:.31s"><strong>🚗 Best Car Wash Day</strong>${cwd.good?`${dlabel(d.time[cwd.index],cwd.index)} looks best — only ${cwd.precipProb}% chance of rain.`:`No great rain-free day this week — lowest chance is ${cwd.precipProb}% on ${dlabel(d.time[cwd.index],cwd.index)}.`}</div>
